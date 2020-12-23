@@ -12,7 +12,6 @@ export const newPilot = async (req: Request, res: Response) => {
   const vehiclesList = []
 
   for (const vehicle of vehicles) {
-    console.log(vehicle)
     const vehicleObj = await vehiclesRepository.findOne(vehicle)
     vehiclesList.push(vehicleObj)
   }
